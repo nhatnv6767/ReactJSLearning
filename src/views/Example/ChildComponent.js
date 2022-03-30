@@ -24,6 +24,7 @@ import React from "react";
 // }
 
 const ChildComponent = () => {
+    console.log('>>>> Check child props', props)
     return (<div>Hello Arrow function</div>)
 }
 
