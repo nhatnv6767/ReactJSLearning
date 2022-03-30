@@ -15,7 +15,7 @@ class MyComponent extends React.Component {
         return (
             <>
                 <div className="first">
-                    Hello Component, My name is {this.state.name}
+                    Hello Component, My name is {this.state['name']}
                 </div>
                 <div className="second">
                     My Channel is {this.state.channel}
