@@ -25,13 +25,17 @@ class MyComponent extends React.Component {
     }
 
     addNewJob = (job) => {
-        let currentJob = this.state.arrJobs
+        this.setState({
+            arrJobs: this.state.arrJobs.push(job)
+        })
     }
 
     render() {
         return (
             <>
-                <AddComponent />
+                <AddComponent
+                    addnewJob={this.addNewJob}
+                />
                 <ChildComponent
                     arrJobs={this.state.arrJobs}
                 />
