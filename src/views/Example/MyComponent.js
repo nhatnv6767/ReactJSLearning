@@ -55,6 +55,7 @@ class MyComponent extends React.Component {
                 <ChildComponent
                     name={'child 1'}
                     age={'25'}
+                    address={'Japan'}
                 />
             </>
         )

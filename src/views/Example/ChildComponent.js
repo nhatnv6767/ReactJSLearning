@@ -8,11 +8,11 @@ class ChildComponent extends React.Component {
     }
 
     render() {
-        let { name1, age1 } = this.props
+        let { name, age, address } = this.props
         console.log('>>>> Check props: ', this.props)
         return (
             <>
-                <div>CHILD COMPONENT: {name1} - {age1}</div>
+                <div>CHILD COMPONENT: {name} - {age} - {address}</div>
             </>
         )
     }
