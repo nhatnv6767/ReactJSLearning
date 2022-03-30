@@ -3,14 +3,14 @@ import React, { Component } from 'react';
 class AddComponent extends Component {
 
     state = {
-        titleJob: '',
+        title: '',
         salary: '',
     }
 
     handleChangeTitleJob = (event) => {
         this.setState(
             {
-                titleJob: event.target.value
+                title: event.target.value
             }
         )
     }
@@ -34,7 +34,7 @@ class AddComponent extends Component {
                 <label htmlFor="fname">Job's title:</label><br />
                 <input
                     type="text"
-                    value={this.state.titleJob}
+                    value={this.state.title}
                     onChange={(event) => this.handleChangeTitleJob(event)}
                 />
                 <br />
