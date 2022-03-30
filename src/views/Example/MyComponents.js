@@ -23,25 +23,33 @@ class MyComponent extends React.Component {
         )
     }
 
+    handleSubmit = () => {
+        alert("...............")
+    }
+
     render() {
         return (
             <>
                 <form>
-                    <label for="fname">First Name</label><br />
+                    <label htmlFor="fname">First Name</label><br />
                     <input
                         type="text"
                         value={this.state.firstName}
                         onChange={(event) => this.handleChangeFirstName(event)}
                     />
                     <br />
-                    <label for="lname">Last Name</label><br />
+                    <label htmlFor="lname">Last Name</label><br />
                     <input
                         type="text"
                         value={this.state.lastName}
                         onChange={(event) => this.handleChangeLastName(event)}
                     />
                     <br />
-                    <input type="submit" value="Submit" />
+                    <input
+                        type="submit"
+                        value="Submit"
+                        onClick={() => this.handleSubmit()}
+                    />
                 </form>
             </>
         )
