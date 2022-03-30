@@ -3,7 +3,7 @@ import React from "react";
 class MyComponent extends React.Component {
 
     state = {
-        name: 'CBBang',
+        name: '',
         channel: 'Balangh'
     }
 
@@ -15,7 +15,6 @@ class MyComponent extends React.Component {
         // console.log(event.target.value, 'event target: ', event.target, 'event object: ', event)
         // Mỗi 1 lần gọi hàm this.setState thì React sẽ nhận được tín hiệu 
         // để cho nó biết nó cần phải set lại biến state, đồng thời gọi lại render() để re-render
-        this.state.name = event.target.value // BAD CODE
         this.setState({
             name: event.target.value
         })
