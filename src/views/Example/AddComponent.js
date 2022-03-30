@@ -3,41 +3,46 @@ import React, { Component } from 'react';
 class AddComponent extends Component {
 
     state = {
-        firstName: '',
-        lastName: '',
+        titleJob: '',
+        salary: '',
     }
 
-    handleChangeFirstName = (event) => {
+    handleChangeTitleJob = (event) => {
         this.setState(
             {
-                firstName: event.target.value
+                titleJob: event.target.value
             }
         )
     }
 
-    handleChangeLastName = (event) => {
+    handleChangeSalary = (event) => {
         this.setState(
             {
-                lastName: event.target.value
+                salary: event.target.value
             }
         )
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault()
+        console.log('>>>> Check data input: ', this.state)
     }
 
     render() {
         return (
             <form>
-                <label htmlFor="fname">First Name</label><br />
+                <label htmlFor="fname">Job's title:</label><br />
                 <input
                     type="text"
-                    value={this.state.firstName}
-                    onChange={(event) => this.handleChangeFirstName(event)}
+                    value={this.state.titleJob}
+                    onChange={(event) => this.handleChangeTitleJob(event)}
                 />
                 <br />
-                <label htmlFor="lname">Last Name</label><br />
+                <label htmlFor="lname">Salary:</label><br />
                 <input
                     type="text"
-                    value={this.state.lastName}
-                    onChange={(event) => this.handleChangeLastName(event)}
+                    value={this.state.salary}
+                    onChange={(event) => this.handleChangeSalary(event)}
                 />
                 <br />
                 <input
