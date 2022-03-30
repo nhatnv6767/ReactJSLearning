@@ -6,6 +6,11 @@ class ChildComponent extends React.Component {
     state = {
         showJobs: false,
     }
+    handleShowHide = (status) => {
+        this.setState({
+            showJobs: status
+        })
+    }
     render() {
         let { arrJobs } = this.props
         let { showJobs } = this.state
