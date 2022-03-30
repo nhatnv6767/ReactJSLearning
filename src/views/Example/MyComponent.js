@@ -24,10 +24,8 @@ class MyComponent extends React.Component {
         ],
     }
 
-
-    handleSubmit = (event) => {
-        event.preventDefault()
-        console.log('>>>> Check data input: ', this.state)
+    addNewJob = (job) => {
+        let currentJob = this.state.arrJobs
     }
 
     render() {
