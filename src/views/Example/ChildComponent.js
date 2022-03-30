@@ -3,12 +3,16 @@ import React from "react";
 
 class ChildComponent extends React.Component {
 
+    state = {
+        showJobs: false,
+    }
     render() {
         let { arrJobs } = this.props
-        // console.log('>>>> Check props: ', this.props)
+        let { showJobs } = this.state
         return (
             <>
                 <div><button>Show</button></div>
+                {showJobs && 
                 <div className="job-lists">
                     {
                         arrJobs.map((item, index) => {
@@ -21,6 +25,7 @@ class ChildComponent extends React.Component {
                     }
                 </div>
                 <div><button>Hide</button></div>
+                }
             </>
         )
     }
