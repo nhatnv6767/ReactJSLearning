@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class AddComponent extends Component {
+class AddComponent extends React.Component {
 
     state = {
         title: '',
@@ -26,7 +26,7 @@ class AddComponent extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
         console.log('>>>> Check data input: ', this.state)
-        this.props.addNewJob('Hello from child (AddComponent)')
+        this.props.addNewJob('Hello from child')
     }
 
     render() {

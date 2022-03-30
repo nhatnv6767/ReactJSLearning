@@ -35,7 +35,7 @@ class MyComponent extends React.Component {
         return (
             <>
                 <AddComponent
-                    addnewJob={this.addNewJob}
+                    addNewJob={this.addNewJob}
                 />
                 <ChildComponent
                     arrJobs={this.state.arrJobs}
