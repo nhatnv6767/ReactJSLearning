@@ -23,7 +23,8 @@ class MyComponent extends React.Component {
         )
     }
 
-    handleSubmit = () => {
+    handleSubmit = (event) => {
+        event.preventDefault()
         alert("...............")
     }
 
@@ -47,8 +48,7 @@ class MyComponent extends React.Component {
                     <br />
                     <input
                         type="submit"
-                        value="Submit"
-                        onClick={() => this.handleSubmit()}
+                        onClick={(event) => this.handleSubmit(event)}
                     />
                 </form>
             </>
