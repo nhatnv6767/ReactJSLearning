@@ -15,6 +15,14 @@ class MyComponent extends React.Component {
         )
     }
 
+    handleChangeLastName = (event) => {
+        this.setState(
+            {
+                lastName: event.target.value
+            }
+        )
+    }
+
     render() {
         return (
             <>
@@ -27,7 +35,12 @@ class MyComponent extends React.Component {
                     />
                     <br />
                     <label for="lname">Last Name</label><br />
-                    <input type="text" value="" /><br />
+                    <input
+                        type="text"
+                        value={this.state.lastName}
+                        onChange={(event) => this.handleChangeLastName(event)}
+                    />
+                    <br />
                     <input type="submit" value="Submit" />
                 </form>
             </>
