@@ -8,6 +8,7 @@ class ChildComponent extends React.Component {
     }
 
     render() {
+        console.log('>>>> Check props: ', this.props)
         return (
             <>
                 <div>CHILD COMPONENT: {this.props.name}</div>
