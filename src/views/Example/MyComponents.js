@@ -16,6 +16,10 @@ class MyComponent extends React.Component {
             name: event.target.value
         })
     }
+
+    handleClickButton = () => {
+
+    }
     render() {
 
         return (
@@ -29,6 +33,10 @@ class MyComponent extends React.Component {
                 </div>
                 <div className="second">
                     My Channel is {this.state.channel}
+                </div>
+
+                <div className="third">
+                    <button onClick={ }>Click me</button>
                 </div>
             </>
 
