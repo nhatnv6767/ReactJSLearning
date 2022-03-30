@@ -10,6 +10,7 @@ class MyComponent extends React.Component {
 
         return (
             <div>
+                {console.log('My name in console log is: ', name)}
                 Hello Component, My name is {name}
             </div>
         )
