@@ -7,27 +7,6 @@ class ChildComponent extends React.Component {
         lastName: "",
     }
 
-    handleChangeFirstName = (event) => {
-        this.setState(
-            {
-                firstName: event.target.value
-            }
-        )
-    }
-
-    handleChangeLastName = (event) => {
-        this.setState(
-            {
-                lastName: event.target.value
-            }
-        )
-    }
-
-    handleSubmit = (event) => {
-        event.preventDefault()
-        console.log('>>>> Check data input: ', this.state)
-    }
-
     render() {
         return (
             <>

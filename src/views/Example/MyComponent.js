@@ -53,8 +53,6 @@ class MyComponent extends React.Component {
                     />
                 </form>
                 <ChildComponent name={'child 1'} />
-                <ChildComponent name={'child 2'} />
-                <ChildComponent name={'child 3'} />
             </>
         )
     }
