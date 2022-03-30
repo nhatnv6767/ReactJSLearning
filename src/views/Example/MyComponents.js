@@ -12,6 +12,9 @@ class MyComponent extends React.Component {
      */
 
     handleOnChangeName = (event) => {
+        // console.log(event.target.value, 'event target: ', event.target, 'event object: ', event)
+        // Mỗi 1 lần gọi hàm this.setState thì React sẽ nhận được tín hiệu 
+        // để cho nó biết nó cần phải set lại biến state, đồng thời gọi lại render() để re-render
         this.setState({
             name: event.target.value
         })
@@ -21,7 +24,7 @@ class MyComponent extends React.Component {
         alert('Click meeeee')
     }
     render() {
-
+        console.log('>>> call render: ', this.state)
         return (
             <>
                 <div className="first">
