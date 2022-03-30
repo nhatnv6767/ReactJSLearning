@@ -8,7 +8,11 @@ class MyComponent extends React.Component {
     }
 
     handleChangeFirstName = (event) => {
-        this.setState({ firstName: event.target.firstName })
+        this.setState(
+            {
+                firstName: event.target.value
+            }
+        )
     }
 
     render() {
