@@ -11,7 +11,7 @@ class ChildComponent extends React.Component {
         let { showJobs } = this.state
         return (
             <>
-                <div><button>Show</button></div>
+                {showJobs === false && <div><button>Show</button></div>}
                 {showJobs &&
                     <>
                         <div className="job-lists">
