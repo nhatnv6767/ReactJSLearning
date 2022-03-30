@@ -23,7 +23,7 @@ import React from "react";
 //     }
 // }
 
-const ChildComponent = () => {
+const ChildComponent = (props) => {
     console.log('>>>> Check child props', props)
     return (<div>Hello Arrow function</div>)
 }
