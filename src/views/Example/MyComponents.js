@@ -36,7 +36,7 @@ class MyComponent extends React.Component {
                 </div>
 
                 <div className="third">
-                    <button onClick={this.handleClickButton()}>Click me</button>
+                    <button onClick={() => { this.handleClickButton() }}>Click me</button>
                 </div>
             </>
 
