@@ -25,11 +25,19 @@ class AddComponent extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
+        if (!this.state.title || !this.state.salary) {
+            alert('Missing required params')
+            return;
+        }
         console.log('>>>> Check data input: ', this.state)
         this.props.addNewJob({
             id: Math.floor(Math.random() * 100000),
             title: this.state.title,
             salary: this.state.salary
+        })
+        this.setState({
+            title: '',
+            salary: ''
         })
     }
 
