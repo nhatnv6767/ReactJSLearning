@@ -6,9 +6,9 @@ class ChildComponent extends React.Component {
     state = {
         showJobs: false,
     }
-    handleShowHide = (status) => {
+    handleShowHide = () => {
         this.setState({
-            showJobs: status
+            showJobs: !this.state.showJobs
         })
     }
     render() {
