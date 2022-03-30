@@ -18,11 +18,11 @@ class ChildComponent extends React.Component {
         console.log('>>> check conditional: ', check)
         return (
             <>
-                {showJobs === false &&
+                {showJobs === false ?
                     <div>
                         <button onClick={() => this.handleShowHide()}>Show</button>
-                    </div>}
-                {showJobs &&
+                    </div>
+                    :
                     <>
                         <div className="job-lists">
                             {
