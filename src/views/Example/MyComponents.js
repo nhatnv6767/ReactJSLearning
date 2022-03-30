@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
 
 class MyComponent extends React.Component {
+
+    /**
+     * 
+     */
     render() {
+        let name = 'None';
+
         return (
-            <div>Hello component My Max</div>
+            <div>
+                Hello Component, My name is {name}
+            </div>
         )
     }
 }
