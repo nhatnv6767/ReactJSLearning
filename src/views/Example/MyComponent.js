@@ -1,5 +1,6 @@
 import React from "react";
 import ChildComponent from './ChildComponent'
+import AddComponent from './AddComponent'
 
 class MyComponent extends React.Component {
 
@@ -49,6 +50,7 @@ class MyComponent extends React.Component {
     render() {
         return (
             <>
+                <AddComponent />
                 <form>
                     <label htmlFor="fname">First Name</label><br />
                     <input
