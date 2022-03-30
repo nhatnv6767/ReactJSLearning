@@ -8,7 +8,7 @@ class MyComponent extends React.Component {
     }
 
     handleChangeFirstName = (event) => {
-
+        this.setState({ firstName: event.target.firstName })
     }
 
     render() {
@@ -19,7 +19,7 @@ class MyComponent extends React.Component {
                     <input
                         type="text"
                         value={this.state.firstName}
-                        onChange={ }
+                        onChange={(event) => this.handleChangeFirstName(event)}
                     />
                     <br />
                     <label for="lname">Last Name</label><br />
