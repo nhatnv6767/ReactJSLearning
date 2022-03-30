@@ -26,6 +26,7 @@ class AddComponent extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
         console.log('>>>> Check data input: ', this.state)
+        this.props.addNewJob('Hello from child (AddComponent)')
     }
 
     render() {

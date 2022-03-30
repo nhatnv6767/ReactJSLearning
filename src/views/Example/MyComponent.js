@@ -25,9 +25,9 @@ class MyComponent extends React.Component {
     }
 
     addNewJob = (job) => {
-        this.setState({
-            arrJobs: this.state.arrJobs.push(job)
-        })
+        // this.setState({
+        //     arrJobs: this.state.arrJobs.push(job)
+        // })
     }
 
     render() {
