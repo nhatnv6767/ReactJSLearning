@@ -12,19 +12,21 @@ class ChildComponent extends React.Component {
         return (
             <>
                 <div><button>Show</button></div>
-                {showJobs && 
-                <div className="job-lists">
-                    {
-                        arrJobs.map((item, index) => {
-                            return (
-                                <div key={item.id}>
-                                    {item.title} - {item.salary}
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-                <div><button>Hide</button></div>
+                {showJobs &&
+                    <>
+                        <div className="job-lists">
+                            {
+                                arrJobs.map((item, index) => {
+                                    return (
+                                        <div key={item.id}>
+                                            {item.title} - {item.salary}
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+                        <div><button>Hide</button></div>
+                    </>
                 }
             </>
         )
