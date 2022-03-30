@@ -53,7 +53,7 @@ class MyComponent extends React.Component {
                     />
                 </form>
                 <ChildComponent
-                    name={'child 1'}
+                    name={this.state.firstName}
                     age={'25'}
                     address={'Japan'}
                 />
