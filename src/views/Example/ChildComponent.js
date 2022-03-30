@@ -14,6 +14,7 @@ class ChildComponent extends React.Component {
 
     handleOnclickDelete = (job) => {
         console.log('>>> handleOnclickDelete: ', job)
+        this.props.deleteAJob(job)
     }
     render() {
         let { arrJobs } = this.props
