@@ -9,7 +9,7 @@ class MyComponent extends React.Component {
         let name = 'None';
 
         return (
-            <React.Fragment>
+            <>
                 <div className="first">
                     {console.log('My name in console log is: ', name)}
                     Hello Component, My name is {name}
@@ -17,7 +17,7 @@ class MyComponent extends React.Component {
                 <div className="second">
                     div 2
                 </div>
-            </React.Fragment>
+            </>
 
         )
     }
