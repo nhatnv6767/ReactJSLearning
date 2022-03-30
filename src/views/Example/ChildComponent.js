@@ -7,11 +7,13 @@ const ChildComponent = (props) => {
             <div className="job-lists">
                 {
                     arrJobs.map((item, index) => {
-                        return (
-                            <div key={item.id}>
-                                {item.title} - {item.salary}
-                            </div>
-                        )
+                        if (item.salary >= 500) {
+                            return (
+                                <div key={item.id}>
+                                    {item.title} - {item.salary}$
+                                </div>
+                            )
+                        }
                     })
                 }
             </div>
