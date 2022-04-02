@@ -22,8 +22,8 @@ class ListToDo extends React.Component {
                     {listTodos && listTodos.length > 0 &&
                         listTodos.map((item, index) => {
                             return (
-                                <div className="todo-child">
-                                    <span>Todo 1</span>
+                                <div className="todo-child" key={item.id}>
+                                    <span> {index + 1} - {item.title}</span>
                                     <button>Edit</button>
                                     <button>Delete</button>
                                 </div>
