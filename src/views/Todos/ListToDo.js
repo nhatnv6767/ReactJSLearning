@@ -29,6 +29,7 @@ class ListTodo extends React.Component {
         this.setState({
             listTodos: currentTodos
         })
+        toast.success("Delete succeed!")
     }
 
     render() {
