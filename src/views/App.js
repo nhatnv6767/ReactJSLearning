@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.scss';
 import MyComponent from './Example/MyComponent'
-import ListToDo from './Todos/ListToDo'
+import ListToDo from './Todos/ListTodo'
 
 /**
  * 2 components: class component / function component (function, arrow)
