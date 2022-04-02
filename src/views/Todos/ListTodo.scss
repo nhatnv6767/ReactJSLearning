@@ -7,6 +7,9 @@
         margin: 0 auto;
 
         .todo-child{
+            &:first-child {
+                background-color: yellow;
+            }
             height: 40px;
             border-bottom: 1px solid grey;
             margin: 1px
