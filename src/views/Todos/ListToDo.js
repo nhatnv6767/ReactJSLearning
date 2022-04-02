@@ -41,8 +41,10 @@ class ListTodo extends React.Component {
     }
 
     handleOnchangeEditTodo = (event) => {
+        let editTodoCopy = { ...this.state.editTodo };
+        editTodoCopy.title = event.target.value;
         this.setState({
-
+            editTodo: editTodoCopy
         })
     }
 
