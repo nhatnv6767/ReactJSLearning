@@ -12,7 +12,11 @@
             }
             height: 40px;
             border-bottom: 1px solid grey;
-            margin: 1px
+            margin: 1px;
+
+            .edit{
+                margin: 0 10px;
+            }
         }
     }
 }
