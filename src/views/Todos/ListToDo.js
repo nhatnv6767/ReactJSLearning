@@ -10,6 +10,8 @@ class ListTodo extends React.Component {
             { id: 'todo2', title: 'Making video' },
             { id: 'todo3', title: 'Fixing bugs' },
         ],
+        // Khi nhấn vào nút edit, chúng ta gán giá trị bằng todo mà chúng ta muốn sửa
+        editTodo: {}
     }
 
     addNewTodo = (todo) => {
@@ -47,7 +49,9 @@ class ListTodo extends React.Component {
                                 <div className="todo-child" key={item.id}>
                                     <span> {index + 1} - {item.title}</span>
                                     {/* <input value={item.title} /> */}
-                                    <button className="edit">Edit</button>
+                                    <button className="edit"
+                                        onClick={() => this.handleEditTodo()}
+                                    >Edit</button>
                                     <button className="delete"
                                         onClick={() => this.handleDeleteTodo(item)}
                                     >Delete</button>
