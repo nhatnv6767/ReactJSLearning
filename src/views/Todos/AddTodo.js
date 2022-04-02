@@ -12,6 +12,11 @@ class AddTodo extends React.Component {
     }
 
     handleAddTodo = () => {
+        if (!this.state.title) {
+            // if(undefined/null/empty) => false
+            alert('Missing title')
+            return;
+        }
         let todo = {
             id: Math.floor(Math.random() * 10000),
             title: this.state.title
