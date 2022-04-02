@@ -19,13 +19,9 @@ class ListToDo extends React.Component {
                 </div>
                 <div className="list-todo-content">
                     <div className="todo-child">
-                        Todo 1
-                    </div>
-                    <div className="todo-child">
-                        Todo 1
-                    </div>
-                    <div className="todo-child">
-                        Todo 1
+                        <span>Todo 1</span>
+                        <button>Edit</button>
+                        <button>Delete</button>
                     </div>
                 </div>
             </div>
