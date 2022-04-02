@@ -22,7 +22,13 @@ class ListTodo extends React.Component {
     }
 
     handleDeleteTodo = (todo) => {
-        console.log('>>> Check todo: ', todo)
+        let currentTodos = this.state.listTodos
+        // filter sẽ lọc ra 1 array mới
+        // mảng đó sẽ bỏ đi cái todo của mình ra
+        currentTodos = currentTodos.filter(item => item.id !== todo.id)
+        this.setState({
+            listTodos: currentTodos
+        })
     }
 
     render() {
