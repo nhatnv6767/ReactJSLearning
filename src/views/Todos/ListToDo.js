@@ -60,9 +60,13 @@ class ListTodo extends React.Component {
                                         <span> {index + 1} - {item.title}</span>
                                         :
                                         <>
-                                            {editTodo.id === item.id &&
+                                            {editTodo.id === item.id ?
                                                 <span>
                                                     {index + 1} - <input value={editTodo.title} />
+                                                </span>
+                                                :
+                                                <span>
+                                                    {index + 1} - {item.title}
                                                 </span>
                                             }
                                         </>
