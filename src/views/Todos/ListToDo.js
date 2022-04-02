@@ -60,7 +60,7 @@ class ListTodo extends React.Component {
                                         <span> {index + 1} - {item.title}</span>
                                         :
                                         <span>
-                                            {index + 1} - <input value={editTodo.value} />
+                                            {index + 1} - <input value={editTodo.title} />
                                         </span>
                                     }
                                     <button
