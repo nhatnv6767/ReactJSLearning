@@ -17,7 +17,10 @@ class AddTodo extends React.Component {
             title: this.state.title
         }
 
-        this.props.addNewTodo() // props in ListTodo.js
+        this.props.addNewTodo(todo) // props in ListTodo.js
+        this.setState({
+            title: ''
+        })
     }
     render() {
         let { title } = this.state;
