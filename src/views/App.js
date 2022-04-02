@@ -13,7 +13,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Need to be be be be
+          Simple TODO Apps with React.js
         </p>
         {/* <MyComponent /> */}
         <ListToDo />
