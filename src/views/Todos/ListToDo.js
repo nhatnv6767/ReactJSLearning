@@ -50,7 +50,7 @@ class ListTodo extends React.Component {
                                     <span> {index + 1} - {item.title}</span>
                                     {/* <input value={item.title} /> */}
                                     <button className="edit"
-                                        onClick={() => this.handleEditTodo()}
+                                        onClick={() => this.handleEditTodo(item)}
                                     >Edit</button>
                                     <button className="delete"
                                         onClick={() => this.handleDeleteTodo(item)}
