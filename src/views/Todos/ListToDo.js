@@ -40,13 +40,22 @@ class ListTodo extends React.Component {
         // when save
         // editTodo: todo luu trong state = todo vua nhan vao
         if (isEmptyObj === false && editTodo.id === todo.id) {
+
+            let listTodosCopy = [...listTodos];
+            // cần tìm xem nó ở phần tử thứ mấy
+            let objIndex = listTodosCopy.findIndex((item => item.id === todo.id))
+
+            // update object's name property.
+            listTodosCopy[objIndex].title = editTodo.title
+            this.setState({
+                listTodos: listTodosCopy
+            })
             return;
         }
         // when edit
         this.setState({
             editTodo: todo
         })
-
     }
 
     handleOnchangeEditTodo = (event) => {
