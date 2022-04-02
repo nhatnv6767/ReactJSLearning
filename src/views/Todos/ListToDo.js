@@ -22,7 +22,7 @@ class ListTodo extends React.Component {
     }
 
     handleDeleteTodo = (todo) => {
-
+        console.log('>>> Check todo: ', todo)
     }
 
     render() {
@@ -41,7 +41,7 @@ class ListTodo extends React.Component {
                                     <span> {index + 1} - {item.title}</span>
                                     <button className="edit">Edit</button>
                                     <button className="delete"
-                                        onClick={() => this.handleDeleteTodo()}
+                                        onClick={() => this.handleDeleteTodo(item)}
                                     >Delete</button>
                                 </div>
                             )
