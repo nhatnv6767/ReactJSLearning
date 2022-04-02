@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './ListTodo.scss';
 
-class ListToDo extends React.Component {
+class ListTodo extends React.Component {
     state = {
         listTodos: [
             { id: 'todo1', title: 'Doing homework' },
@@ -38,4 +38,4 @@ class ListToDo extends React.Component {
     }
 }
 
-export default ListToDo;
+export default ListTodo;

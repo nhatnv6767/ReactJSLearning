@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.scss';
 import MyComponent from './Example/MyComponent'
-import ListToDo from './Todos/ListTodo'
+import ListTodo from './Todos/ListTodo'
 
 /**
  * 2 components: class component / function component (function, arrow)
@@ -16,7 +16,7 @@ function App() {
           Simple TODO Apps with React.js
         </p>
         {/* <MyComponent /> */}
-        <ListToDo />
+        <ListTodo />
       </header>
     </div>
   );
