@@ -34,6 +34,12 @@ class ListTodo extends React.Component {
         toast.success("Delete succeed!")
     }
 
+    handleEditTodo = (todo) => {
+        this.setState({
+            editTodo: todo
+        })
+    }
+
     render() {
         // let listTodos = this.state.listTodos
         let { listTodos } = this.state;
