@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.scss';
 import MyComponent from './Example/MyComponent'
+import ListToDo from './Todos/ListToDo'
 
 /**
  * 2 components: class component / function component (function, arrow)
@@ -14,7 +15,8 @@ function App() {
         <p>
           Need to be be be be
         </p>
-        <MyComponent />
+        {/* <MyComponent /> */}
+        <ListToDo />
       </header>
     </div>
   );
