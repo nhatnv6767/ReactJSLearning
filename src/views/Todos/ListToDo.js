@@ -35,9 +35,16 @@ class ListTodo extends React.Component {
     }
 
     handleEditTodo = (todo) => {
-        this.setState({
-            editTodo: todo
-        })
+        let isEmptyObj = Object.keys(editTodo).length === 0;
+        // when save
+        if (isEmptyObj === false) {
+
+        } else {
+            // when edit
+            this.setState({
+                editTodo: todo
+            })
+        }
     }
 
     handleOnchangeEditTodo = (event) => {
