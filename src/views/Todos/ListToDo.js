@@ -46,6 +46,7 @@ class ListTodo extends React.Component {
                             return (
                                 <div className="todo-child" key={item.id}>
                                     <span> {index + 1} - {item.title}</span>
+                                    {/* <input value={item.title} /> */}
                                     <button className="edit">Edit</button>
                                     <button className="delete"
                                         onClick={() => this.handleDeleteTodo(item)}
