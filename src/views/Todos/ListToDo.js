@@ -40,6 +40,12 @@ class ListTodo extends React.Component {
         })
     }
 
+    handleOnchangeEditTodo = (event) => {
+        this.setState({
+
+        })
+    }
+
     render() {
         // let listTodos = this.state.listTodos
         let { listTodos, editTodo } = this.state;
@@ -62,7 +68,10 @@ class ListTodo extends React.Component {
                                         <>
                                             {editTodo.id === item.id ?
                                                 <span>
-                                                    {index + 1} - <input value={editTodo.title} />
+                                                    {index + 1} - <input
+                                                        value={editTodo.title}
+                                                        onChange={(event) => this.handleOnchangeEditTodo(event)}
+                                                    />
                                                 </span>
                                                 :
                                                 <span>
