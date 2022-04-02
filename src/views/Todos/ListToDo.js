@@ -9,6 +9,7 @@ class ListToDo extends React.Component {
         ],
     }
     render() {
+        // let listTodos = this.state.listTodos
         let { listTodos } = this.state;
         return (
             <div className="list-todo-container">
