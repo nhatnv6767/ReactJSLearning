@@ -12,7 +12,12 @@ class AddTodo extends React.Component {
     }
 
     handleAddTodo = () => {
-        alert('Add')
+        let todo = {
+            id: Math.floor(Math.random() * 10000),
+            title: this.state.title
+        }
+
+        this.props.addNewTodo() // props in ListTodo.js
     }
     render() {
         let { title } = this.state;
