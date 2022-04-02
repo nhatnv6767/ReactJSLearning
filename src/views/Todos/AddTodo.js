@@ -11,6 +11,9 @@ class AddTodo extends React.Component {
         })
     }
 
+    handleAddTodo = () => {
+        alert('Add')
+    }
     render() {
         let { title } = this.state;
         return (
@@ -18,7 +21,9 @@ class AddTodo extends React.Component {
                 <input type="text" value={title}
                     onChange={(event) => this.handleOnChangeTitle(event)}
                 />
-                <button type="button" className="add">Add</button>
+                <button type="button" className="add"
+                    onClick={() => this.handleAddTodo()}
+                >Add</button>
             </div>
         );
     }
