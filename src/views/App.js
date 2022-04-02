@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.scss';
 import MyComponent from './Example/MyComponent'
 import ListTodo from './Todos/ListTodo'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 /**
  * 2 components: class component / function component (function, arrow)
@@ -18,6 +20,18 @@ function App() {
         {/* <MyComponent /> */}
         <ListTodo />
       </header>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+
     </div>
   );
 }
