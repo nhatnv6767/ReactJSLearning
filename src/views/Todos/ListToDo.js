@@ -10,6 +10,12 @@ class ListTodo extends React.Component {
             { id: 'todo3', title: 'Fixing bugs' },
         ],
     }
+
+    addNewTodo = () => {
+        this.setState({
+            // spread js
+        })
+    }
     render() {
         // let listTodos = this.state.listTodos
         let { listTodos } = this.state;
