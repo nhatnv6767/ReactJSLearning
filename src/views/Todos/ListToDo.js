@@ -59,9 +59,13 @@ class ListTodo extends React.Component {
                                     {isEmptyObj == true ?
                                         <span> {index + 1} - {item.title}</span>
                                         :
-                                        <span>
-                                            {index + 1} - <input value={editTodo.title} />
-                                        </span>
+                                        <>
+                                            {editTodo.id === item.id &&
+                                                <span>
+                                                    {index + 1} - <input value={editTodo.title} />
+                                                </span>
+                                            }
+                                        </>
                                     }
                                     <button
                                         className="edit"
