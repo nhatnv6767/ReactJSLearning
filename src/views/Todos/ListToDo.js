@@ -86,7 +86,9 @@ class ListTodo extends React.Component {
                                         className="edit"
                                         onClick={() => this.handleEditTodo(item)}
                                     >
-                                        Edit
+                                        {isEmptyObj === false && editTodo.id === item.id ?
+                                            'Save' : 'Edit'
+                                        }
                                     </button>
                                     <button
                                         className="delete"
