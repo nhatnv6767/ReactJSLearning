@@ -48,8 +48,11 @@ class ListTodo extends React.Component {
             // update object's name property.
             listTodosCopy[objIndex].title = editTodo.title
             this.setState({
-                listTodos: listTodosCopy
+                listTodos: listTodosCopy,
+                // khi set bằng rỗng thì nút save sẽ chuyển thành nút edit
+                editTodo: {}
             })
+            toast.success("Update todo succeed!")
             return;
         }
         // when edit
