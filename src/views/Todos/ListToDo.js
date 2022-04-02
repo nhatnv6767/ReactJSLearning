@@ -20,6 +20,11 @@ class ListTodo extends React.Component {
 
         toast.success("Wow so easy!")
     }
+
+    handleDeleteTodo = (todo) => {
+
+    }
+
     render() {
         // let listTodos = this.state.listTodos
         let { listTodos } = this.state;
@@ -35,7 +40,9 @@ class ListTodo extends React.Component {
                                 <div className="todo-child" key={item.id}>
                                     <span> {index + 1} - {item.title}</span>
                                     <button className="edit">Edit</button>
-                                    <button className="delete">Delete</button>
+                                    <button className="delete"
+                                        onClick={() => this.handleDeleteTodo()}
+                                    >Delete</button>
                                 </div>
                             )
                         })
@@ -43,7 +50,7 @@ class ListTodo extends React.Component {
 
 
                 </div>
-            </div>
+            </div >
         );
     }
 }
