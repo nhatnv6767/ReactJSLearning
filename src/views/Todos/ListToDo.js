@@ -12,10 +12,9 @@ class ListTodo extends React.Component {
     }
 
     addNewTodo = (todo) => {
-        let currentListTodo = this.state.listTodos;
-        currentListTodo.push(todo);
+
         this.setState({
-            listTodos: currentListTodo
+            listTodos: [...this.state.listTodos, todo]
         })
     }
     render() {
@@ -23,7 +22,9 @@ class ListTodo extends React.Component {
         let { listTodos } = this.state;
         return (
             <div className="list-todo-container">
-                <AddTodo />
+                <AddTodo
+                    addNewTodo={this.addNewTodo}
+                />
                 <div className="list-todo-content">
                     {listTodos && listTodos.length > 0 &&
                         listTodos.map((item, index) => {
