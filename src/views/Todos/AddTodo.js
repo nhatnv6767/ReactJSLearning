@@ -11,7 +11,9 @@ class AddTodo extends React.Component {
         let { title } = this.state;
         return (
             <div className="add-todo">
-                <input type="text" value={title} />
+                <input type="text" value={title}
+                    onChange={(event) => handleOnChangeTitle(event)}
+                />
                 <button type="button" className="add">Add</button>
             </div>
         );
