@@ -12,9 +12,10 @@ class ListTodo extends React.Component {
     }
 
     addNewTodo = (todo) => {
+        let currentListTodo = this.state.listTodos;
+        currentListTodo.push(todo);
         this.setState({
-            // spread js
-            listTodos: [...this.state.listTodos, todo]
+            listTodos: currentListTodo
         })
     }
     render() {
