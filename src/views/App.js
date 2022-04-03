@@ -25,7 +25,7 @@ function App() {
           <img src={logo} className="App-logo" alt="logo" />
 
           <Switch>
-            <Route path="/">
+            <Route path="/" exact>
               <Home />
             </Route>
             <Route path="/todo">

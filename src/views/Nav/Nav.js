@@ -5,9 +5,9 @@ class Nav extends Component {
     render() {
         return (
             <div className="topnav">
-                <a className="active" href="#home">Home</a>
-                <a href="#news">Todos</a>
-                <a href="#about">About</a>
+                <a className="active" href="/">Home</a>
+                <a href="/todo">Todos</a>
+                <a href="/about">About</a>
             </div>
         );
     }
