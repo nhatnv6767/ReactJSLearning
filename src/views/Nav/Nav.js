@@ -8,9 +8,9 @@ class Nav extends Component {
     render() {
         return (
             <div className="topnav">
-                <NavLink to="/" activeClassName="active" exact={true}>Home</NavLink>
-                <NavLink to="/todo" activeClassName="active">Todos</NavLink>
-                <NavLink to="/about" activeClassName="active">About</NavLink>
+                <NavLink to="/" activeclassname="active" exact="true">Home</NavLink>
+                <NavLink to="/todo" activeclassname="active">Todos</NavLink>
+                <NavLink to="/about" activeclassname="active">About</NavLink>
             </div>
         );
     }
