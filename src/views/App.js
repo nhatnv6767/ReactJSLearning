@@ -3,6 +3,7 @@ import './App.scss';
 import ListTodo from './Todos/ListTodo'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import MyComponent from './Example/MyComponent'
 import Nav from './Nav/Nav'
 import Home from './Example/Home'
 import {
@@ -22,9 +23,18 @@ function App() {
         <header className="App-header">
           <Nav />
           <img src={logo} className="App-logo" alt="logo" />
-          {/* <MyComponent /> */}
-          {/* <ListTodo /> */}
-          <Home />
+
+          <Switch>
+            <Route path="/">
+              <Home />
+            </Route>
+            <Route path="/todo">
+              <ListTodo />
+            </Route>
+            <Route path="/about">
+              <MyComponent />
+            </Route>
+          </Switch>
 
         </header>
         <ToastContainer
