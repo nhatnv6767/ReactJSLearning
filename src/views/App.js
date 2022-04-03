@@ -4,7 +4,7 @@ import ListTodo from './Todos/ListTodo'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Nav from './Nav/Nav'
-
+import Home from './Example/Home'
 /**
  * 2 components: class component / function component (function, arrow)
  */
@@ -16,7 +16,8 @@ function App() {
         <Nav />
         <img src={logo} className="App-logo" alt="logo" />
         {/* <MyComponent /> */}
-        <ListTodo />
+        {/* <ListTodo /> */}
+        <Home />
 
       </header>
       <ToastContainer
