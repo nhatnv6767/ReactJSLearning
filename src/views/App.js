@@ -12,6 +12,7 @@ import Nav from './Nav/Nav'
 function App() {
   return (
     <div className="App">
+      <Nav />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -19,7 +20,7 @@ function App() {
         </p>
         {/* <MyComponent /> */}
         {/* <ListTodo /> */}
-        <Nav />
+
       </header>
       <ToastContainer
         position="top-right"
