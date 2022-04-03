@@ -3,6 +3,7 @@ import './App.scss';
 import ListTodo from './Todos/ListTodo'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Nav from './Nav/Nav'
 
 /**
  * 2 components: class component / function component (function, arrow)
@@ -17,7 +18,8 @@ function App() {
           Simple TODO Apps with React.js
         </p>
         {/* <MyComponent /> */}
-        <ListTodo />
+        {/* <ListTodo /> */}
+        <Nav />
       </header>
       <ToastContainer
         position="top-right"
