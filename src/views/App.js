@@ -26,13 +26,10 @@ function App() {
 
           <Routes>
             <Route path="/" exact="true" element={<Home />}>
-              {/* {<Home />} */}
             </Route>
             <Route path="/todo" element={<ListTodo />}>
-              {/* {<ListTodo />} */}
             </Route>
             <Route path="/about" element={<MyComponent />}>
-              {/* {<MyComponent />} */}
             </Route>
           </Routes>
 
