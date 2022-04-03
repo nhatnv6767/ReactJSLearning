@@ -8,7 +8,7 @@ import Nav from './Nav/Nav'
 import Home from './Example/Home'
 import {
   BrowserRouter,
-  Routes,
+  Switch,
   Route,
   Link
 } from "react-router-dom";
@@ -24,14 +24,17 @@ function App() {
           <Nav />
           <img src={logo} className="App-logo" alt="logo" />
 
-          <Routes>
-            <Route path="/" exact="true" element={<Home />}>
+          <Switch>
+            <Route path="/" exact>
+              <Home />
             </Route>
-            <Route path="/todo" element={<ListTodo />}>
+            <Route path="/todo">
+              <ListTodo />
             </Route>
-            <Route path="/about" element={<MyComponent />}>
+            <Route path="/about">
+              <MyComponent />
             </Route>
-          </Routes>
+          </Switch>
 
         </header>
         <ToastContainer
