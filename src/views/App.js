@@ -12,14 +12,11 @@ import Nav from './Nav/Nav'
 function App() {
   return (
     <div className="App">
-      <Nav />
       <header className="App-header">
+        <Nav />
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Simple TODO Apps with React.js
-        </p>
         {/* <MyComponent /> */}
-        {/* <ListTodo /> */}
+        <ListTodo />
 
       </header>
       <ToastContainer
