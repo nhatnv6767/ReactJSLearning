@@ -24,17 +24,17 @@ function App() {
           <Nav />
           <img src={logo} className="App-logo" alt="logo" />
 
-          <Switch>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="/todo">
-              <ListTodo />
-            </Route>
-            <Route path="/about">
-              <MyComponent />
-            </Route>
-          </Switch>
+          {/* <Switch> */}
+          <Route path="/" exact component={Home}>
+            {/* <Home /> */}
+          </Route>
+          <Route path="/todo" component={ListTodo}>
+            {/* <ListTodo /> */}
+          </Route>
+          <Route path="/about" component={MyComponent}>
+            {/* <MyComponent /> */}
+          </Route>
+          {/* </Switch> */}
 
         </header>
         <ToastContainer
