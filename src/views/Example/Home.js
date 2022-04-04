@@ -4,9 +4,9 @@ import Color from "../HOC/Color"
 
 class Home extends Component {
     componentDidMount() {
-        setTimeout(() => {
-            this.props.history.push('/todo')
-        }, 3000)
+        // setTimeout(() => {
+        //     this.props.history.push('/todo')
+        // }, 3000)
     }
     render() {
         console.log(">>> Check props: ", this.props)
