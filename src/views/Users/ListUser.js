@@ -12,6 +12,10 @@ class ListUser extends Component {
             listUsers: res && res.data && res.data.data ? res.data.data : []
         })
     }
+
+    handleViewDetailUser = (user) => {
+        console.log(">>>Check user: ", user)
+    }
     // khi chạy sẽ chạy vào render lần 1 và sau đó sẽ chạy vào componentDidMount
     render() {
         let { listUsers } = this.state
@@ -26,7 +30,11 @@ class ListUser extends Component {
                     {listUsers && listUsers.length > 0 &&
                         listUsers.map((item, index) => {
                             return (
-                                <div className="child" key={item.id}>
+                                <div
+                                    className="child"
+                                    key={item.id}
+                                    onClick={() => this.handleViewDetailUser(item)}
+                                >
                                     {index + 1} - {item.first_name} {item.last_name}
                                 </div>
                             )
