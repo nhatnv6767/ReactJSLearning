@@ -16,6 +16,7 @@ class Home extends Component {
                 <div>
                     Hello world from Homepage!
                 </div>
+                <br />
                 <div>
                     <img src={logo} />
                 </div>
