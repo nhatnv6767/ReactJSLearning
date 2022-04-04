@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './ListUser.scss';
+import { withRouter } from "react-router-dom"
 
 class ListUser extends Component {
     state = {
@@ -14,7 +15,7 @@ class ListUser extends Component {
     }
 
     handleViewDetailUser = (user) => {
-        console.log(">>>Check user: ", user)
+        console.log(">>>Check user: ", this.props)
     }
     // khi chạy sẽ chạy vào render lần 1 và sau đó sẽ chạy vào componentDidMount
     render() {
@@ -48,4 +49,4 @@ class ListUser extends Component {
 }
 // tương đương điều kiện if, vì phải check để sử dụng hàm map, còn nếu listUsers ko check,
 // để cho nó rỗng chẳng hạn thì sẽ lỗi
-export default ListUser;
+export default withRouter(ListUser);
