@@ -17,16 +17,21 @@ class DetailUser extends Component {
     }
     render() {
         let { user } = this.state
+        let isEmptyObj = Object.keys(editTodo).length === 0;
         return (
             <>
                 <div>
                     Detail User with id: {this.props.match.params.id}
                 </div>
-                <div>User's name: </div>
-                <div>User's email: </div>
-                <div>
-                    <img src="" />
-                </div>
+                {isEmptyObj === false &&
+                    <>
+                        <div>User's name: </div>
+                        <div>User's email: </div>
+                        <div>
+                            <img src="" />
+                        </div>
+                    </>
+                }
             </>
         );
     }
