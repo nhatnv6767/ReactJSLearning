@@ -15,6 +15,10 @@ class DetailUser extends Component {
             })
         }
     }
+
+    handleBackButton = () => {
+        this.props.history.push('/user')
+    }
     render() {
         let { user } = this.state
         let isEmptyObj = Object.keys(user).length === 0;
@@ -29,6 +33,11 @@ class DetailUser extends Component {
                         <div>User's email: {user.email}</div>
                         <div>
                             <img src={user.avatar} />
+                        </div>
+                        <div>
+                            <button type="button" onClick={() => this.handleBackButton()}>
+                                Back
+                            </button>
                         </div>
                     </>
                 }
