@@ -14,6 +14,7 @@ class ListUser extends Component {
     }
     // khi chạy sẽ chạy vào render lần 1 và sau đó sẽ chạy vào componentDidMount
     render() {
+        let { listUsers } = this.state
         return (
             <div className="list-user-container">
                 <div className="title">
@@ -21,21 +22,22 @@ class ListUser extends Component {
                 </div>
 
                 <div className="list-user-content">
-                    <div className="child">
-                        1 - None - Bulang
-                    </div>
 
-                    <div className="child">
-                        1 - None - Bulang
-                    </div>
+                    {listUsers && listUsers.length > 0 &&
+                        listUsers.map((item, index) => {
+                            return (
+                                <div className="child" key={item.id}>
+                                    {index + 1} - {item.first_name} {item.last_name}
+                                </div>
+                            )
+                        })
+                    }
 
-                    <div className="child">
-                        1 - None - Bulang
-                    </div>
                 </div>
             </div>
         );
     }
 }
-
+// tương đương điều kiện if, vì phải check để sử dụng hàm map, còn nếu listUsers ko check,
+// để cho nó rỗng chẳng hạn thì sẽ lỗi
 export default ListUser;
