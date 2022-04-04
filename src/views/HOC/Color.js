@@ -8,14 +8,15 @@ function getRandomColor() {
     for (var i = 0; i < 6; i++) {
         color += letters[Math.floor(Math.random() * 16)]
     }
+    return color;
 }
 
 // truyền vào 1 component thay vì là 1 biến như bình thường
 const Color = (WrappedComponent) => {
     const colorRandom = getRandomColor()
-    return (
+    return (props) => (
         <div style={{ color: colorRandom }}>
-            <WrappedComponent />
+            <WrappedComponent {...props} />
         </div>
     )
 }
