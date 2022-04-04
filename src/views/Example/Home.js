@@ -18,7 +18,10 @@ class Home extends Component {
                 </div>
                 <br />
                 <div>
-                    <img src={logo} />
+                    <img
+                        src={logo}
+                        style={{ width: '80%', height: '80%' }}
+                    />
                 </div>
             </>
         );
