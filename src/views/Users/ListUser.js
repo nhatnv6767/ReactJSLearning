@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 class ListUser extends Component {
-    componentDidMount() {
+    async componentDidMount() {
         // promise của JS
-        axios.get('https://reqres.in/api/users?page=1')
-            .then(res => {
-                console.log(">>>> Check res: ", res.data.data);
-            })
+        // axios.get('https://reqres.in/api/users?page=1')
+        //     .then(res => {
+        //         console.log(">>>> Check res: ", res.data.data);
+        //     })
+
+        let res = await axios.get('https://reqres.in/api/users?page=1')
+        console.log(">>>> Check res: ", res.data.data);
     }
     // khi chạy sẽ chạy vào render lần 1 và sau đó sẽ chạy vào componentDidMount
     render() {
