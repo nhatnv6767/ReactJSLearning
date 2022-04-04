@@ -136,4 +136,4 @@ class ListTodo extends React.Component {
     }
 }
 
-export default Color(ListTodo);
+export default (ListTodo);
