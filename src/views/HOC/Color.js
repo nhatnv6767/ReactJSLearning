@@ -12,8 +12,9 @@ function getRandomColor() {
 
 // truyền vào 1 component thay vì là 1 biến như bình thường
 export default Color = (WrappedComponent) => {
+    const colorRandom = getRandomColor()
     return (
-        <div>
+        <div style={{ color: colorRandom }}>
             <WrappedComponent />
         </div>
     )
