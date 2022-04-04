@@ -7,6 +7,7 @@ import MyComponent from './Example/MyComponent'
 import Nav from './Nav/Nav'
 import Home from './Example/Home'
 import ListUser from './Users/ListUser'
+import DetailUser from './Users/DetailUser'
 import {
   BrowserRouter,
   Switch,
@@ -35,7 +36,9 @@ function App() {
             <Route path="/about" component={MyComponent}>
               {/* <MyComponent /> */}
             </Route>
-            <Route path="/user" component={ListUser}>
+            <Route path="/user" exact component={ListUser}>
+            </Route>
+            <Route path="/user/:id" component={DetailUser}>
             </Route>
           </Switch>
 

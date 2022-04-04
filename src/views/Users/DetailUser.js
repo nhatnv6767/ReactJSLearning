@@ -4,7 +4,7 @@ class DetailUser extends Component {
     render() {
         return (
             <div>
-
+                Detail User
             </div>
         );
     }
