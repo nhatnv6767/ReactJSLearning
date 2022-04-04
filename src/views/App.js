@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import MyComponent from './Example/MyComponent'
 import Nav from './Nav/Nav'
 import Home from './Example/Home'
+import ListUser from './Users/ListUser'
 import {
   BrowserRouter,
   Switch,
@@ -24,17 +25,19 @@ function App() {
           <Nav />
           <img src={logo} className="App-logo" alt="logo" />
 
-          {/* <Switch> */}
-          <Route path="/" exact component={Home}>
-            {/* <Home /> */}
-          </Route>
-          <Route path="/todo" component={ListTodo}>
-            {/* <ListTodo /> */}
-          </Route>
-          <Route path="/about" component={MyComponent}>
-            {/* <MyComponent /> */}
-          </Route>
-          {/* </Switch> */}
+          <Switch>
+            <Route path="/" exact component={Home}>
+              {/* <Home /> */}
+            </Route>
+            <Route path="/todo" component={ListTodo}>
+              {/* <ListTodo /> */}
+            </Route>
+            <Route path="/about" component={MyComponent}>
+              {/* <MyComponent /> */}
+            </Route>
+            <Route path="/user" component={ListUser}>
+            </Route>
+          </Switch>
 
         </header>
         <ToastContainer
