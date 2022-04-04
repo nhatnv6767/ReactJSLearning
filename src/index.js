@@ -5,12 +5,12 @@ import App from './views/App';
 import reportWebVitals from './reportWebVitals';
 import './styles/global.scss';
 
-const rootElement = document.getElementById('root')
-const root = ReactDOMClient.createRoot(rootElement);
-root.render(
+
+ReactDOM.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
 // );
