@@ -17,7 +17,7 @@ class DetailUser extends Component {
     }
     render() {
         let { user } = this.state
-        let isEmptyObj = Object.keys(editTodo).length === 0;
+        let isEmptyObj = Object.keys(user).length === 0;
         return (
             <>
                 <div>
@@ -25,10 +25,10 @@ class DetailUser extends Component {
                 </div>
                 {isEmptyObj === false &&
                     <>
-                        <div>User's name: </div>
-                        <div>User's email: </div>
+                        <div>User's name: {user.first_name} {user.last_name}</div>
+                        <div>User's email: {user.email}</div>
                         <div>
-                            <img src="" />
+                            <img src={user.avatar} />
                         </div>
                     </>
                 }
