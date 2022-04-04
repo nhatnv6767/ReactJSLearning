@@ -10,15 +10,24 @@ class DetailUser extends Component {
         if (this.props.match && this.props.match.params) {
             let id = this.props.match.params.id
             let res = await axios.get(`https://reqres.in/api/users/${id}`)
-            console.log(">>> Check res: ", res)
+            this.setState({
+                user: res && res.data && res.data.data ? res.data.data : {}
+            })
         }
     }
     render() {
-        console.log(">>> Check props: ", this.props)
+        let { user } = this.state
         return (
-            <div>
-                Detail User with id: {this.props.match.params.id}
-            </div>
+            <>
+                <div>
+                    Detail User with id: {this.props.match.params.id}
+                </div>
+                <div>User's name: </div>
+                <div>User's email: </div>
+                <div>
+                    <img src="" />
+                </div>
+            </>
         );
     }
 }
