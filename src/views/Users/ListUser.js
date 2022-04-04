@@ -15,7 +15,7 @@ class ListUser extends Component {
     }
 
     handleViewDetailUser = (user) => {
-        console.log(">>>Check user: ", this.props)
+        this.props.history.push(`/user/${user.id}`)
     }
     // khi chạy sẽ chạy vào render lần 1 và sau đó sẽ chạy vào componentDidMount
     render() {
