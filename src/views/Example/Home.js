@@ -62,7 +62,10 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         // cần phải dispatch 1 action (object)
-        deleteUserRedux: () => dispatch({ type: 'DELETE_USER', })
+        // type: Định nghĩa tên của action là gì
+        // payload: ví dụ khi đi máy bay thì phải gửi hàng hoá, thì hàng hoá
+        // lúc này là payload, tức là dữ liệu muốn mang theo từ cái action đó
+        deleteUserRedux: (userDelete) => dispatch({ type: 'DELETE_USER', payload: userDelete })
     }
 }
 

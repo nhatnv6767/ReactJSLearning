@@ -11,7 +11,13 @@ const initState = {
 }
 // Khi khởi tạo thì biến state đã có giá trị
 const rootReducer = (state = initState, action) => {
-    return state;
+    switch (action.type) {
+        case 'DELETE_USER':
+            console.log(">>> Run into delete user: ", action)
+            break;
+        default:
+            return state;
+    }
 }
 
 export default rootReducer;
