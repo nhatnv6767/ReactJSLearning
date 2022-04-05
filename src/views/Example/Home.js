@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from "react-router";
 import Color from "../HOC/Color"
 import logo from '../../assets/images/reddit.png';
+import { connect } from 'react-redux';
 
 class Home extends Component {
     componentDidMount() {
@@ -29,4 +30,11 @@ class Home extends Component {
 }
 
 // export default withRouter(Home);
-export default Color(Home);
+// state ở đây là của Redux
+const mapStateToProps = (state) => {
+    // state ở trong thằng công nhân Reducer
+    dataRedux: state.users
+}
+
+// liên kết redux và react trong component Home
+export default connect(mapStateToProps)(Color(Home));
