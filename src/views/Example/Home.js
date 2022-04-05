@@ -33,7 +33,9 @@ class Home extends Component {
 // state ở đây là của Redux
 const mapStateToProps = (state) => {
     // state ở trong thằng công nhân Reducer
-    dataRedux: state.users
+    return {
+        dataRedux: state.users
+    }
 }
 
 // liên kết redux và react trong component Home
