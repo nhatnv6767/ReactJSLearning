@@ -11,7 +11,8 @@ class Home extends Component {
         // }, 3000)
     }
     render() {
-        console.log(">>> Check props: ", this.props)
+        // Data truyền qua props của React thông qua redux
+        console.log(">>> Check props Redux: ", this.props.dataRedux)
         return (
             <>
                 <div>
