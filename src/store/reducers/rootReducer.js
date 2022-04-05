@@ -24,6 +24,16 @@ const rootReducer = (state = initState, action) => {
                 // ví dụ ở đây là thằng posts giá trị vẫn còn nguyên
                 ...state, users
             }
+
+        case 'CREATE_USER':
+            let id = Math.floor(Math.random() * 100000)
+            let user = {
+                id: id,
+                name: `Random - ${id}`
+            }
+            return {
+                ...state, users: [...state.users, user]
+            }
         default:
             return state;
     }
