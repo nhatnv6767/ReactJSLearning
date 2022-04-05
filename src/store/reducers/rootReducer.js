@@ -14,10 +14,14 @@ const initState = {
 const rootReducer = (state = initState, action) => {
     switch (action.type) {
         case 'DELETE_USER':
-            console.log(">>> Run into delete user: ", action)
             let users = state.users
             users = users.filter(item => item.id !== action.payload.id)
             return {
+                // lý do phải copy lại state (...state)
+                // sau này khi trong state có nhiều dữ liệu 
+                // thì ta copy hết dữ liệu trong state đó và lấy giá trị users mới ghi đè lên 
+                // phần users đó thôi, còn những phần khác thì vẫn giữ nguyên giá trị, 
+                // ví dụ ở đây là thằng posts giá trị vẫn còn nguyên
                 ...state, users
             }
         default:
