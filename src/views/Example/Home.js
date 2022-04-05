@@ -13,6 +13,7 @@ class Home extends Component {
 
     handleDeleteUser = (user) => {
         console.log(">>> Check user delete: ", user);
+        this.props.deleteUserRedux(user);
     }
     render() {
         // Data truyền qua props của React thông qua redux
