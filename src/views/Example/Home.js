@@ -13,6 +13,7 @@ class Home extends Component {
     render() {
         // Data truyền qua props của React thông qua redux
         console.log(">>> Check props Redux: ", this.props.dataRedux)
+        let listUsers = this.props.dataRedux
         return (
             <>
                 <div>
@@ -22,8 +23,19 @@ class Home extends Component {
                 <div>
                     <img
                         src={logo}
-                        style={{ width: '80%', height: '80%' }}
+                        style={{ width: '80px', height: '80px' }}
                     />
+                </div>
+                <div>
+                    {listUsers && listUsers.length > 0 &&
+                        listUsers.map((item, index) => {
+                            return (
+                                <div key={item.id}>
+                                    {index + 1} - {item.name}
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </>
         );

@@ -6,6 +6,7 @@ const initState = {
     users: [
         { id: 1, name: 'None' },
         { id: 2, name: 'Bulangk' },
+        { id: 3, name: 'Learn Redux' },
     ]
 }
 // Khi khởi tạo thì biến state đã có giá trị
