@@ -15,6 +15,10 @@ class Home extends Component {
         console.log(">>> Check user delete: ", user);
         this.props.deleteUserRedux(user);
     }
+
+    handleCreateUser = () => {
+        this.props.addUserRedux()
+    }
     render() {
         // Data truyền qua props của React thông qua redux
         console.log(">>> Check props Redux: ", this.props.dataRedux)
@@ -37,14 +41,25 @@ class Home extends Component {
                             return (
                                 <div key={item.id}>
                                     {index + 1} - {item.name}
+                                    &nbsp;
                                     <span
                                         style={{ cursor: 'pointer' }}
-                                        onClick={() => this.handleDeleteUser(item)}> x
+                                        onClick={() => this.handleDeleteUser(item)}>x
                                     </span>
+                                    &nbsp;
+                                    {/* <span
+                                        style={{ cursor: 'pointer' }}
+                                        onClick={() => this.handleCreateUser()}>+
+                                    </span> */}
+
                                 </div>
                             )
                         })
                     }
+
+                    <button onClick={() => this.handleCreateUser()}>
+                        Add new
+                    </button>
                 </div>
             </>
         );
@@ -66,7 +81,8 @@ const mapDispatchToProps = (dispatch) => {
         // type: Định nghĩa tên của action là gì
         // payload: ví dụ khi đi máy bay thì phải gửi hàng hoá, thì hàng hoá
         // lúc này là payload, tức là dữ liệu muốn mang theo từ cái action đó
-        deleteUserRedux: (userDelete) => dispatch({ type: 'DELETE_USER', payload: userDelete })
+        deleteUserRedux: (userDelete) => dispatch({ type: 'DELETE_USER', payload: userDelete }),
+        addUserRedux: () => dispatch({ type: 'CREATE_USER' })
     }
 }
 
