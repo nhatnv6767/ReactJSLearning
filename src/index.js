@@ -14,7 +14,9 @@ import rootReducer from './store/reducers/rootReducer'
 
 // sau khi khởi động xong thì phải nạp dữ liệu 'store={reduxStore}', nơi lưu trữ dữ liệu
 // createStore(rootReducer) nạp dữ liệu vào, và nạp vào thằng công nhân đã tạo kia
-const reduxStore = createStore(rootReducer)
+const reduxStore = createStore(rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={reduxStore}>
