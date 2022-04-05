@@ -10,6 +10,10 @@ class Home extends Component {
         //     this.props.history.push('/todo')
         // }, 3000)
     }
+
+    handleDeleteUser = (user) => {
+        console.log(">>> Check user delete: ", user);
+    }
     render() {
         // Data truyền qua props của React thông qua redux
         console.log(">>> Check props Redux: ", this.props.dataRedux)
@@ -32,6 +36,10 @@ class Home extends Component {
                             return (
                                 <div key={item.id}>
                                     {index + 1} - {item.name}
+                                    <span
+                                        style={{ cursor: 'pointer' }}
+                                        onClick={() => this.handleDeleteUser(item)}> x
+                                    </span>
                                 </div>
                             )
                         })
