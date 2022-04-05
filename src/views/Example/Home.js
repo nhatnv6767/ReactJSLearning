@@ -59,5 +59,12 @@ const mapStateToProps = (state) => {
     }
 }
 
+const mapDispatchToProps = (dispatch) => {
+    return {
+        // cần phải dispatch 1 action (object)
+        deleteUserRedux: () => dispatch({ type: 'DELETE_USER', })
+    }
+}
+
 // liên kết redux và react trong component Home
-export default connect(mapStateToProps)(Color(Home));
+export default connect(mapStateToProps, mapDispatchToProps)(Color(Home));
