@@ -4,14 +4,22 @@ import * as ReactDOMClient from 'react-dom/client'
 import App from './views/App';
 import reportWebVitals from './reportWebVitals';
 import './styles/global.scss';
+
+// bọc ngoài 'App' tức là bọc ngoài thằng React, tức 
+// là ép thằng React khởi động cùng thằng Redux <=> Khởi động song song
+
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import rootReducer from './store/reducers/rootReducer'
 
-
+// sau khi khởi động xong thì phải nạp dữ liệu 'store={reduxStore}', nơi lưu trữ dữ liệu
+// createStore(rootReducer) nạp dữ liệu vào, và nạp vào thằng công nhân đã tạo kia
+const reduxStore = createStore(rootReducer)
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={reduxStore}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
