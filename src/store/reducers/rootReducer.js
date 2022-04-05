@@ -14,6 +14,7 @@ const rootReducer = (state = initState, action) => {
     switch (action.type) {
         case 'DELETE_USER':
             console.log(">>> Run into delete user: ", action)
+            return state;
             break;
         default:
             return state;
